@@ -14,7 +14,11 @@
 ```bash
 git clone https://github.com/nobrainsjusttalking/workmate
 cd workmate
+# Install dependencies
 uv sync
+# Activate .venv before running the script
+.venv/Scripts/activate # for windows
+source .venv/bin/activate # for linux
 ```
 
 ## Пример запуска
