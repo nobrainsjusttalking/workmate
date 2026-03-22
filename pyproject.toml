@@ -60,4 +60,7 @@ ignore = [
     "T201", # no print rule
     "EM102",  # f-strings in exceptions
     "D203",
+    "S101",  # allow pytest asserts
+    "PT006",
+    "RUF001",
 ]
