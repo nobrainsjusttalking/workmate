@@ -1,6 +1,6 @@
 import pytest
 
-from main import validate_paths, load_csvs, get_report, generate_report, REPORTS
+from main import REPORTS, generate_report, get_report, load_csvs, validate_paths
 from models import CoffeeRecord
 
 
@@ -57,7 +57,7 @@ def test_get_report(report_name, expected_class):
 
 
 def test_get_report_nonexistent_report():
-    with pytest.raises(ValueError) as exc_info:
+    with pytest.raises(ValueError, match="Unknown report") as exc_info:
         get_report("median-sleep-key-error")
 
     assert isinstance(exc_info.value.__cause__, KeyError)

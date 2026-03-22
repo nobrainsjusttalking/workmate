@@ -1,5 +1,5 @@
-from report_types import MedianCoffeeReport
 from models import CoffeeRecord
+from report_types import MedianCoffeeReport
 
 
 def test_median_report():
